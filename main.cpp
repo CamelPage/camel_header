@@ -8,13 +8,13 @@ int main() {
     bool quit = true;
 
     while (quit) {
-        string a = listen_event_key_press("0", "3");
-        if(event_key(a, "9")) {
+        string key = listen_event_key_press("0", "3");
+        if(event_key(key, "9")) {
             sent += " ";
             continue;
         }
-        if (!event_key(a, "0")) {
-            sent += a;
+        if (!event_key(key, "0")) {
+            sent += key;
         } else {
             quit = false;
         }
